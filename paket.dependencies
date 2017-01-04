@@ -1,0 +1,8 @@
+source https://www.nuget.org/api/v2
+redirects: on
+framework: >= net45
+nuget FAKE
+nuget FSharp.Core
+nuget Microsoft.Owin.Host.HttpListener
+nuget Microsoft.Owin.Hosting
+nuget Nancy.Owin
