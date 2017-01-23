@@ -2,3 +2,4 @@ FSharp.Core
 Nancy.Owin
 Microsoft.Owin.Host.HttpListener
 Microsoft.Owin.Hosting
+logary

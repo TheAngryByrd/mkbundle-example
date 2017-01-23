@@ -3,6 +3,7 @@ redirects: on
 framework: >= net45
 nuget FAKE
 nuget FSharp.Core
+nuget logary
 nuget Microsoft.Owin.Host.HttpListener
 nuget Microsoft.Owin.Hosting
 nuget Nancy.Owin
