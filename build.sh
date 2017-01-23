@@ -17,6 +17,18 @@ then
 
   packages/FAKE/tools/FAKE.exe $@ --fsiargs build.fsx
 else
+  if [[ "$OSTYPE" == "darwin"* ]];
+  then
+    if [[ $PATH == /Library/Frameworks/Mono.framework/Commands* ]] 
+    then
+      echo "all good"
+    else
+       export PATH=/Library/Frameworks/Mono.framework/Commands:$PATH 
+    fi
+    
+    export AS="as -arch i386"
+    export CC="cc -arch i386 -framework CoreFoundation -lobjc -liconv"
+  fi
   # use mono
   mono .paket/paket.bootstrapper.exe
   exit_code=$?
